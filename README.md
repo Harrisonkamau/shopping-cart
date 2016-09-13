@@ -1,2 +1,2 @@
 #Shopping Cart
-<p>Built in NodeJS, EXpressJS and MongoDB.</p>
+<p>Built in NodeJS, ExpressJS and MongoDB.</p>
