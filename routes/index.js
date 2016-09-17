@@ -1,6 +1,11 @@
 var express = require('express');
 var router = express.Router();
+var csurf = require('csurf')
+
 var Product = require('../models/product');
+
+// set up route middleware
+var csrfProtection = csrf();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -14,7 +19,8 @@ router.get('/', function(req, res, next) {
      res.render('shop/index', { title: 'Shopping Cart', products: productChunks });
   })
   
- 
 });
+
+
 
 module.exports = router;
