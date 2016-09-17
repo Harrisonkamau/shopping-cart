@@ -32,4 +32,10 @@ router.post('/user/signup', passport.authenticate('local,signup',{
   failureFlash: true
 }));
 
+
+// create profile route
+router.get('/profile', function(req, res){
+  res.render('/user/profile')
+})
+
 module.exports = router;
