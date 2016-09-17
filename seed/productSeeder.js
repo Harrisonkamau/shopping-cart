@@ -14,17 +14,18 @@ var products = [
         description: 'You will love this game!!',
         price: 12
     }), 
-    new Product({
-        imagePath: 'http://2.bp.blogspot.com/-eaUFJXypecU/Vdm7q1b7QiI/AAAAAAAADrw/zBEfnTeOn6M/s1600/3.jpg',
-        title:'Gotham Video Game',
-        description: 'Awesome game made in Germany!!!',
-        price: 10
-    }),
+
      new Product({
         imagePath: 'https://minecraft.net/static/pages/img/minecraft-hero.df1112867f04.jpg',
         title:'Minecraft Game',
         description: 'Awesome game !!!',
         price: 20
+    }),
+     new Product({
+        imagePath: 'http://2.bp.blogspot.com/-eaUFJXypecU/Vdm7q1b7QiI/AAAAAAAADrw/zBEfnTeOn6M/s1600/3.jpg',
+        title:'Gotham Video Game',
+        description: 'Awesome game made in Germany!!!',
+        price: 10
     }),
     new Product({
         imagePath: 'https://i.ytimg.com/vi/avyGmYtkqEA/maxresdefault.jpg',
