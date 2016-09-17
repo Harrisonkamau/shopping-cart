@@ -8,4 +8,4 @@ var schema = new Schema({
     price:{type:Number, required: true}
 });
 
-modules.exports = mongoose.model('Product', schema);
+module.exports = mongoose.model('Product', schema);
