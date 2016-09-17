@@ -6,7 +6,7 @@ var Product = require('../models/product');
 
 // set up route middleware
 var csrfProtection = csrf();
-
+router.use(csrfProtection);
 /* GET home page. */
 router.get('/', function(req, res, next) {
   Product.find(function(err,docs){
@@ -21,6 +21,9 @@ router.get('/', function(req, res, next) {
   
 });
 
-
+// create user's signup route
+router.get('/signup', function(req, res, next){
+  res.render('/user/signup', {csrfToken:req.csrfToken()});
+})
 
 module.exports = router;
