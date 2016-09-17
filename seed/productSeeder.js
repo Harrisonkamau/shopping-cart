@@ -9,6 +9,12 @@ mongoose.connect('localhost:27017/shopping');
 // create new products as instances of Product model
 var products = [
     new Product({
+        imagePath: 'http://static4.gamespot.com/uploads/scale_super/1549/15494192/2895125-8700646588-28483.jpg',
+        title:'Gamesoft Game',
+        description: 'You will love this game!!',
+        price: 12
+    }), 
+    new Product({
         imagePath: 'http://2.bp.blogspot.com/-eaUFJXypecU/Vdm7q1b7QiI/AAAAAAAADrw/zBEfnTeOn6M/s1600/3.jpg',
         title:'Gotham Video Game',
         description: 'Awesome game made in Germany!!!',
@@ -21,10 +27,16 @@ var products = [
         price: 20
     }),
     new Product({
-        imagePath: 'http://static4.gamespot.com/uploads/scale_super/1549/15494192/2895125-8700646588-28483.jpg',
-        title:'Gamesoft Game',
-        description: 'You will love this game!!',
-        price: 12
+        imagePath: 'https://i.ytimg.com/vi/avyGmYtkqEA/maxresdefault.jpg',
+        title:'Call of Duty',
+        description: 'Simply the best',
+        price: 12 
+    }), 
+    new Product({
+        imagePath: 'http://thisgengaming.com/wp-content/uploads/2015/04/maxresdefault-5.jpg',
+        title:'Mortal Kombat X',
+        description: 'The best in its own rights:-)',
+        price: 19 
     }), 
 
     new Product({
