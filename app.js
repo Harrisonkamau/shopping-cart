@@ -10,11 +10,12 @@ var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 
-// configure mongoose to connect to the database
-mongoose.connect('localhost:27017/shopping');
-
 // create express app
 var app = express();
+
+// configure mongoose to connect to the database
+mongoose.Promise = global.Promise;
+mongoose.connect('localhost:27017/shopping');
 
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout:'layout', extname:'.hbs'}));
