@@ -1,3 +1,4 @@
+// define variables
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -5,10 +6,14 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expressHbs = require('express-handlebars');
+var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 
+// configure mongoose to connect to the database
+mongoose.connect('localhost:27017/shopping');
 
+// create express app
 var app = express();
 
 // view engine setup
