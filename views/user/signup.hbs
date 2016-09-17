@@ -2,7 +2,7 @@
     <div class="col-md-4 col-md-offset-4">
         <h1>Sign Up</h1>
         Validation Errors
-        <form action="" method="POST">
+        <form action="/user/signup" method="POST">
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="text" id="email" name="email" class="form-control" placeholder="What's your email?">
@@ -11,7 +11,8 @@
                 <label for="Password">Password</label>
                 <input type="password" id="Password" name="Password" class="form-control" placeholder="Type your Password">
             </div>
-            <button type="submit">Sign up</button>
+             <input type="hidden" name="_csrf" value="{{csrfToken}}">
+            <button type="submit" class="btn btn-primary">Sign up</button>
         </form>
 
     </div>
