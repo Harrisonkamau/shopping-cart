@@ -6,7 +6,7 @@ var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 mongoose.connect('localhost:27017/shopping');
 
-// create new products
+// create new products as instances of Product model
 var products = [
     new Product({
         imagePath: 'http://2.bp.blogspot.com/-eaUFJXypecU/Vdm7q1b7QiI/AAAAAAAADrw/zBEfnTeOn6M/s1600/3.jpg',
