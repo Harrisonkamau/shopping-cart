@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var csurf = require('csurf')
+var csrf = require('csurf')
 
 var Product = require('../models/product');
 
@@ -22,8 +22,12 @@ router.get('/', function(req, res, next) {
 });
 
 // create user's signup route
-router.get('/signup', function(req, res, next){
-  res.render('/user/signup', {csrfToken:req.csrfToken()});
-})
+router.get('/user/signup', function(req, res, next){
+  res.render('user/signup', {csrfToken:req.csrfToken()});
+});
+
+router.post('/user/signup', function(req, res, next){
+  res.render('user/signup', {csrfToken:req.csrfToken()});
+});
 
 module.exports = router;
