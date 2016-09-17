@@ -24,7 +24,8 @@ router.get('/', function(req, res, next) {
 
 // create user's signup route
 router.get('/user/signup', function(req, res, next){
-  res.render('user/signup', {csrfToken:req.csrfToken()});
+  var messages = req.flash('error')
+  res.render('user/signup', {csrfToken:req.csrfToken(), messages: messages});
 });
 
 router.post('/user/signup', passport.authenticate('local.signup',{
@@ -36,7 +37,7 @@ router.post('/user/signup', passport.authenticate('local.signup',{
 
 // create profile route
 router.get('/profile', function(req, res){
-  res.render('/user/profile')
+  res.render('user/profile')
 })
 
 module.exports = router;
