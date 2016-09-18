@@ -43,6 +43,7 @@ passport.use('local.signup', new LocalStrategy({
             if(err){
                 return done(err);
             }
+            console.log(newUser.email+" Has been saved!");
             return done(null, newUser);
         })
 
